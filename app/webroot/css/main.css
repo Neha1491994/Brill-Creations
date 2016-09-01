@@ -1,0 +1,769 @@
+/* 
+
+Dashboard Template 
+http://www.templatemo.com/preview/templatemo_415_dashboard
+
+    1. CSS Imports
+    2. General Styles
+    3. Sidebar
+    4. Charts
+    5. Preferences form
+    6. Sign in form
+    7. tables.html
+    8. Bootstrap overrides
+    9. Maps
+    10. Media Queries
+	
+--------------------------------------- */
+
+/* 1. CSS Imports
+--------------------------------------- */
+@import url('http://fonts.googleapis.com/css?family=Open Sans:300,400,700');
+@import url(font-awesome.min.css);
+@import url(bootstrap.min.css);
+
+/* 2. General Styles
+--------------------------------------- */
+* { font-family: 'Open Sans', sans-serif; }
+body { background-color: rgb(255,255,255); }
+h1 { font-size: 24px; }
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+.logo { display: inline-block; 
+        margin-left:20px
+}
+.logo h1 {
+    font-size: 61px;
+    color: #294A9A;
+    margin: 29px 129px;
+}
+.logo1{
+	display: inline-block; 
+    margin-left:20px
+	
+}
+
+.MyClass123{
+	content:url("../img/logo.png");
+	height:72px;
+	width:248px;
+}
+
+.contant-name{
+	position: relative;
+    
+	font-size:20px;
+}
+.contant-tag{
+	    position: relative;
+    float: right;
+	font-size:20px;
+}
+.templatemo-content-wrapper {
+    float: left;
+    width: 100%;
+}
+.templatemo-content {
+    margin-left: 235px;
+    margin-top: 0px;
+    min-height: 600px;
+    padding: 25px 20px 0 20px;
+    background-color: white;
+    overflow-x: hidden;
+}
+.templatemo-content1 {
+    
+    margin-top: 0px;
+    min-height: 600px;
+    padding: 25px 20px 0 20px;
+    background-color: white;
+    overflow-x: hidden;
+}
+.templatemo-content2 {
+    
+    margin-top: 0px;
+    min-height: 600px;
+   /* padding: 25px 20px 0 0px;*/
+    background-color: white;
+    overflow-x: hidden;
+}
+.templatemo-footer {
+    clear: both;
+    font-size: 15px;
+    padding: 8px 0 3px 0;
+    text-align: center;
+    color: #02000c;
+    background-color: #9888bb;
+	
+}
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+
+/* 3. Sidebar
+------------------------------------------------------*/
+#templatemo_search_box {
+    width: 150px;
+    display: inline-block;
+}
+
+.navbar {
+	background:url('../img/cake.icon.png') no-repeat left;
+    margin-right: 23px;
+    margin-left: 16px;
+    margin-top: 12px;
+}
+.navbar-header {
+	color: rgb(127,127,127);
+        }
+.templatemo-sidebar {
+    padding: 0;
+    margin-top: 20px;
+}
+.templatemo-sidebar .templatemo-sidebar-menu {
+    list-style: none;
+    margin: -28px 0px;
+    padding: 0;
+	    background-color: #EBEBEB;
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li > a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0px;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;    
+}
+.templatemo-sidebar-menu a { color: black; }
+.templatemo-sidebar-menu a:hover { text-decoration: none; }
+.templatemo-sidebar-menu li.sub .templatemo-submenu { display: none; }
+.templatemo-sidebar-menu li.sub.open .templatemo-submenu { display: block; }
+.templatemo-submenu { padding-left: 0; }
+.templatemo-submenu li {
+    list-style: none;
+    background-color: #DFDFDF;
+}
+.templatemo-submenu li a {
+    display: block;
+    padding: 20px 15px;
+    margin: 0;
+}
+.templatemo-sidebar-menu > li.sub.open > a {
+    background-color: rgba(145,145,145,0.3);
+}
+.templatemo-sidebar .templatemo-sidebar-menu >li.active, .templatemo-sidebar .templatemo-sidebar-menu>li>a:hover {
+    background-color: rgb(191, 232, 167);
+}
+.templatemo-submenu li > a:hover {
+    background-color: rgb(228,228,228);
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li > a > i {
+    font-size: 16px;
+    top: 2px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+
+/* 4. Charts 
+--------------------------------------------*/
+.templatemo-chart-box {
+    display: inline-block;
+    text-align: center;
+    padding: 20px 30px 30px 0;
+}
+
+/* 5. Preferences Form
+------------------------------------------*/
+#templatemo-preferences-form {
+    max-width: 960px;
+    margin-bottom: 30px;
+}
+
+/* 6. Sign in Form 
+--------------------------------------------*/
+.templatemo-signin-form {
+    padding-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* 7. tables.html
+------------------------------------------*/
+#templatemo_sort_btn { margin-bottom: 20px; }
+
+/* 8. Bootstrap overrides
+----------------------------------------------*/
+.nav-pills>li>a, .nav-tabs>li>a, .alert, .progress, .panel, .btn, .panel-group .panel, .form-control, .modal-content, .breadcrumb {
+    border-radius: 0;
+}
+.list-group-item:first-child, .panel-heading {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-control-feedback { right: 15px; }
+
+/* 9. Maps
+------------------------------------------------------*/
+.jqvmap-zoomin, .jqvmap-zoomout {
+    width: 15px;
+    height: 15px;
+}
+.vmap { height: 400px; }
+
+/* 10. Media Queries
+------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+    .templatemo-sidebar {
+        width: 235px;
+        float: left;
+        position: relative;
+        margin-right: -100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .navbar-form {
+        padding: 0;
+        margin-left: 0;
+    }
+    .navbar-header { float: none; }
+    .navbar-toggle { display: block; }
+    .templatemo-sidebar {
+        border-top: 0 !important;
+        margin: 20px;
+    }
+    .templatemo-sidebar.navbar-collapse.collapse {
+        display: none !important;
+    }
+    .templatemo-sidebar.navbar-collapse.in {
+        border-top: 0 !important;
+        margin: 20px;
+        position: relative;
+        overflow: hidden !important;
+        overflow-y: auto !important;
+        display: block !important;
+    }
+    .templatemo-content-wrapper { float: none; }
+    .templatemo-content { margin: 0; }
+}
+@media screen and (max-width: 767px) {
+    .templatemo-chart-box {
+        padding-right: 0;
+    }
+}
+/*** customized **/
+.error-message{
+color:red;
+}
+
+label.error, label.error {
+    color: red;
+    font-style: italic;
+}
+
+.showme{ 
+display: none;
+
+}
+.showhim:hover .showme{
+display : block;
+position: relative;
+float:left;
+}
+#ProductAddForm{
+	    
+}
+#UserAddForm {
+    margin: 21px 1138px;
+    float: right;
+}
+
+#loginform
+{
+   
+	
+	margin-top: 235px;
+    margin-left: 547px;
+    background-color: #585858;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px #424242;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: helvetica;
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 31%;
+    height: 42%;
+    background: rgba(255,255,255,.6);
+    z-index: 1001;
+   
+}
+#loginform #close_login
+{
+   position:absolute;
+   top:2px;
+   left:474px;
+   width:15px;
+   height:15px;
+}
+#loginform p
+{
+   margin-top:40px;
+   font-size:22px;
+   color:#E6E6E6;
+}
+#loginform #login
+{
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#loginform #password
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#loginform #dologin
+{
+   margin-left:-5px;
+   margin-top:10px;
+   width:250px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#E6E6E6;
+   background-color:grey;
+   font-size:20px;
+}
+#ac-wrapper {
+    
+}
+ .hovermanuecolor{
+	 color: #fff;
+ }
+
+.producttablediv{
+	text-align: center;
+	margin: auto;
+	height: 180px;
+	width: 300px;
+	background-color: #f1f1f1;
+}
+/*product view*/
+.product-img-box .product-image-zoom {
+  height: 400px;
+  width: 400px;
+}
+
+#ja-mycart .product-image img {
+  width: 65px;
+  height: 65px;
+}
+
+#upsell-product-table.products-grid .product-image img {
+  border-radius: 5px 5px 0 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.product-image-wrap {
+    float: none;
+}
+.view-product{
+	    position: relative;
+		height: 360px;
+		width: 428px;
+}
+
+
+/*category dropdown menu*/
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 273px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 99;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*table view*/
+div.img {
+    border: 1px solid #ccc;
+}
+div.img1 {
+    border: 1px solid #ccc;
+	    height: 165px;
+}
+div.img1:hover {
+    border: 5px solid #777;
+}
+div.img:hover {
+    border: 5px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 0px;
+    text-align: center;
+	font-family: fantasy;
+    color: #191818;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.subcatimg {
+    max-height: 200px;
+    max-width: 200px;
+}
+.mapbox{
+	width:500px;
+	height:380px;
+}
+
+.productimg{
+	/*max-height:100px;
+	max-width:100px;*/
+}
+
+
+/*************************
+*******Cart CSS******
+**************************/
+
+#do_action {
+  margin-bottom: 50px;
+}
+
+.breadcrumbs {
+  position: relative;
+}
+
+.breadcrumbs .breadcrumb {
+  background:transparent;
+  margin-bottom: 16px;
+  padding-left: 0;
+}
+
+.breadcrumbs .breadcrumb li a {
+  background:#FE980F;
+  color: #FFFFFF;
+  padding: 3px 7px;
+}
+
+.breadcrumbs .breadcrumb li a:after {
+  content:"";
+  height:auto;
+  width: auto;
+  border-width: 8px;
+  border-style: solid;
+  border-color:transparent transparent transparent #FE980F;
+  position: absolute;
+  top: 11px;
+  left:48px;
+
+}
+
+.breadcrumbs .breadcrumb > li + li:before {
+  content: " ";
+}
+
+ .cart_info {
+  border: 1px solid #E6E4DF;
+  margin-bottom: 50px;
+  margin-left: -16px;
+}
+
+
+.cart_info .cart_menu {
+	background: #ffffff;
+    color: #141314;
+    font-size: 21px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+.cart_info .table.table-condensed thead tr {
+  height: 33px;
+}
+
+
+.cart_info .table.table-condensed tr {
+  border-bottom: 1px solid#F7F7F0
+}
+
+ .cart_info .table.table-condensed tr:last-child {
+  border-bottom: 0
+}
+
+.cart_info table tr td {
+  border-top: 0 none;
+  vertical-align: inherit;
+}
+
+
+ .cart_info .image {
+  
+}
+.description{
+	  
+}
+.quantity{
+	   
+.total{
+	   
+
+.cart_info .cart_description h4 {
+  margin-bottom: 0
+}
+
+.cart_info .cart_description h4 a {
+  color: #363432;
+  font-family: 'Roboto',sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+
+}
+
+ .cart_info .cart_description p {
+  color:#696763
+}
+
+
+.cart_info .cart_price p {
+  color:#696763;
+  font-size: 18px
+}
+
+
+.cart_info .cart_total_price {
+  color: #FE980F;
+  font-size: 24px;
+}
+
+.cart_product {
+  display: block;
+  /*margin: 15px -70px 10px 25px;*/
+}
+
+.cart_quantity_button a {
+  background:#F0F0E9;
+  color: #696763;
+  display: inline-block;
+  font-size: 16px;
+  height: 28px;
+  overflow: hidden;
+  text-align: center;
+  width: 35px;
+  float: left;
+}
+
+
+.cart_quantity_input {
+  color: #696763;
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Roboto',sans-serif;
+  margin-top: 9px;
+  
+}
+
+
+.cart_delete  {
+  display: block;
+  margin-right: -12px;
+  overflow: hidden;
+}
+
+
+.cart_delete a {
+  background:#F0F0E9;
+  color: #FFFFFF;
+  padding: 5px 7px;
+  font-size: 16px
+}
+
+.cart_delete a:hover {
+  background:#FE980F
+}
+
+
+.bg h2.title {
+  margin-right:0;
+  margin-left:0;
+  margin-top: 0;
+}
+
+.heading h3 {
+  color: #363432;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.heading p {
+  color: #434343;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+#do_action .total_area {
+  padding-bottom: 18px !important;
+}
+
+#do_action .total_area, #do_action .chose_area {
+  border: 1px solid #E6E4DF;
+  color: #696763;
+  padding: 30px 25px 30px 0;
+  margin-bottom: 80px;
+}
+
+.total_area span {
+  float: right;
+}
+
+.total_area ul li {
+  background:#E6E4DF;
+  color: #696763;
+  margin-top: 10px;
+  padding: 7px 20px;
+}
+
+
+.user_option label {
+  color: #696763;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+
+.user_info {
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.user_info label {
+  color: #696763;
+  display: block;
+  font-size: 15px;
+  font-weight: normal;
+
+}
+
+.user_info .single_field {
+  width: 31%
+}
+
+.user_info .single_field.zip-field input {
+  background: transparent;
+  border: 1px solid#F0F0E9
+}
+
+.user_info > li {
+  float: left;
+  margin-right: 10px
+}
+
+.user_info > li > span {
+}
+
+.user_info input, select, textarea {
+  background: #F0F0E9;
+  border:0;
+  color: #696763;
+  padding: 5px;
+  width: 100%;
+  border-radius: 0;
+  resize: none
+}
+
+.user_info select:focus {
+  border: 0
+}
+
+
+.chose_area .update {
+  margin-left: 40px;
+}
+
+.update, .check_out {
+  background: #FE980F;
+  border-radius: 0;
+  color: #FFFFFF;
+  margin-top: 18px;
+  border: none;
+  padding: 5px 15px;
+}
+.update{
+    margin-left: 40px;
+}
+
+.check_out {
+  margin-left: 20px
+}
+.cart_action{
+	flot:;
+}

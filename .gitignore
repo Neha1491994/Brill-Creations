@@ -1,0 +1,26 @@
+# User specific & automatically generated files #
+#################################################
+/app/Config/site_constants.php
+/app/Config/core.php
+/app/Config/database.php
+/app/tmp
+/app/webroot/files/
+/lib/Cake/Console/Templates/skel/tmp/
+/build
+/dist
+/tags
+/app/webroot/ck_dev.pem
+/app/webroot/ck_dev_old.pem
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.settings/
+Documents/eBoard - New Design & Flow.pptx
