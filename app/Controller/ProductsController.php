@@ -344,10 +344,13 @@ class ProductsController extends AppController {
 	public function admin_order_detail($id = null) {
 		
 		if($id){
-			
-			$orderdetail = $this->Order->find("first", array("conditions" => array("Order.id" => $id)));
-		//pr($orderdetail);exit;
-		}
+			 // pr($id);
+			  $this->Orderdetail->recursive = 2;
+			  $order_detail = $this->Orderdetail->find("all", array("conditions" => array("Orderdetail.order_id" => $id)));
+			 // pr($order_detail);exit;
+			  
+		  }
+		  $this->set(compact('order_detail'));
 	}
 	
 	public function product_list($id = Null) {

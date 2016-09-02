@@ -158,12 +158,21 @@ $cakeDescription = __d('cake_dev', 'Brill Creations');
 					</div>
 					<!--div class="col-md-3"-->
 					<div class="col-md-4">
-						<div class="search_box pull-right">
-							<form class="navbar-form">
+					<div class="row"> 
+					<div class="search_box pull-right">
+						<!--	<form class="navbar-form">
                               <input type="text" class="form-control" id="templatemo_search_box" placeholder="Search...">
                               <span class="btn btn-default">Go</span>
-                           </form>
-				        </div>
+                           </form> -->
+					      <div class="col-md-2"></div>
+						  <?php echo $this->Form->create('Search',array('url' => array('controller'=>'users','action'=>'search'),array('label' => false,'div'=>'','class'=>'navbar-form'))); ?>
+					   	  <div class="col-md-7">
+						  <?php echo $this->form->input('Search.keyword',array('label' =>false,'div'=>'','class'=>'form-control','id'=>'templatemo_search_box' ,'placeholder'=>'Search...')); ?></div>
+						  <div class="col-md-3">
+						  <?php	echo $this->form->submit('Go',array('label' => false,'div'=>'','class'=>'btn btn-default'));?>
+						  <?php	echo $this->Form->end(); ?></div>
+					</div>
+					</div>
 					</div>
 				</div>
 			</div>

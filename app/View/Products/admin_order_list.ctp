@@ -35,19 +35,14 @@ echo $this->element('common/left_menu');
                           </button>
                           <ul class="dropdown-menu" role="menu">
 						     <li><?php echo $this->Html->link(    "Edit",  array('action'=>'edit', $order['User']['id']) ); ?></li>
-							<!-- <li><?php/* if( $order['User']['status'] != 0){
-										echo $this->Html->link("Delete",array('action'=>'delete', $order['User']['id']),null,'Are you sure you want to delete this category ?');}
-								else{
-										echo $this->Html->link("Re-Activate", array('action'=>'activate', $order['User']['id']));
-								}*/?>
-							</li> -->
+							
 							<li><?php if( $order['Order']['status'] != "Pending"){
 										echo $this->Html->link("Pending",array('action'=>'Order_Pending', $order['Order']['id']),null,'Are you sure you want to change the status ?');}
 								else{
 										echo $this->Html->link("Delievered", array('action'=>'Order_delievered', $order['Order']['id']));
 								}?>
 							</li>
-						<li><?php echo $this->Html->link("Order",   array('controller'=>'Products','action'=>'order_list', $order['User']['id']) ); ?></li>
+						<li><?php echo $this->Html->link("Detail",   array('controller'=>'Products','action'=>'order_detail', $order['Order']['id']) ); ?></li>
 						</li>
                         </ul>
                         </div>

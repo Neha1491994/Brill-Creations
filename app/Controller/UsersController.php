@@ -7,7 +7,7 @@ class UsersController extends AppController {
 	//days for schedule
 	
 	//Specify  models(tables)	
-	var $uses = array('Admin','User','Cart_detail','Address','Order','Orderdetail');	
+	var $uses = array('Admin','User','Cart_detail','Address','Order','Orderdetail','Product','Category');	
 	public $components = array('Session','RequestHandler','Paginator');
 	var $helpers = array('Session','Js' => array('Jquery'),'Paginator');
 	
@@ -319,6 +319,60 @@ class UsersController extends AppController {
 			
 			$this->sendMail($user_email,'Request delievery mail', 'get_code', array('title_for_layout' =>'get_code delievery mail',"ordernumber"=>$ordernumber,"products"=>$items,"product" => '0'));
 			$this->redirect(array('action'=>'cart_detail')); 
+		}
+	}
+	
+	//search product with product and category name -----------
+	
+	public function search() {
+	    $json_return = array();		
+		if ($this->request->is('post') || $this->request->is('put')) 
+		{	
+	        //pr($this->request);
+	        $keyword = $this->data['Search']['keyword'];
+			//pr($keyword);exit;
+			if($keyword != ""){
+				$search['pro'] = $this->Product->query("SELECT * FROM products WHERE product_name LIKE '".$keyword."%' OR product_description LIKE '%".$keyword."%'");
+				$search['cat'] = $this->Category->query("SELECT * FROM categories WHERE category_name LIKE '%".$keyword."%' OR description LIKE '%".$keyword."%'");
+               // pr($search);exit;				
+				if($search['pro'] != NULL || $search['cat'] != NULL){
+					//pr($search);exit;
+					if($search['pro'] != "" &&  $search['pro'] != NULL){
+							$subcate = array();
+							$i = 0;
+							foreach($search['pro'] as $Product){
+								
+									$subcate[$i]['id'] =  $Product['products']['id'];
+									$subcate[$i]['name'] =  $Product['products']['product_name'];             
+									$i++;
+							}
+					}else{
+							//pr($search['cat']);exit;
+							$i = 0;
+							foreach($search['cat'] as $Product){
+								$id[$i] = $Product['categories']['id'];
+								$i++;
+							}
+							//pr($id);
+							$prod = $this->Product->find('all',array("conditions" =>array('Product.category_id'=>$id),'recursive'=>0));
+							//pr($prod);
+							$subcate = array();
+							$i = 0;
+							foreach($prod as $Product){	
+							
+									$subcate[$i]['id'] =  $Product['Product']['id'];
+									$subcate[$i]['name'] =  $Product['Product']['product_name'];            
+									$i++;
+							}
+						}
+					pr($subcate);exit;
+					$this->request->data = $subcate;
+					exit;
+				}
+				exit;
+			}
+			//pr('oops');
+			exit;
 		}
 	}
 

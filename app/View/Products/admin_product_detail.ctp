@@ -54,14 +54,14 @@ echo $this->element('common/left_menu');
 				
                 <div class="row">
                   <div class="col-md-12 margin-bottom-15">
-                    <label class="control-label" for="AdminFirstName">Product colours</label>
-					<p class="form-control-static" id="username"> <?php echo $product['colour'];?></p>
+                    <label class="control-label" for="AdminFirstName">Product material</label>
+					<p class="form-control-static" id="username"> <?php echo $product['material'];?></p>
                   </div>
 				
 			
                   <div class="col-md-12 margin-bottom-15">
-                    <label class="control-label" for="AdminFirstName">Price</label>
-					<p class="form-control-static" id="username"> <?php echo $product['unitprice'];?></p>
+                    <label class="control-label" for="AdminFirstName">Size</label>
+					<p class="form-control-static" id="username"> <?php echo $product['size'];?></p>
                   </div>
 				
 				</div>

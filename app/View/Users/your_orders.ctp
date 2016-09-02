@@ -50,7 +50,7 @@
 										</tr>
 										<?php					 
 										endforeach; 
-                                        endif	;									
+                                       									
 										?>
 										<tr>
 										<ul class="pagination right">
@@ -60,10 +60,12 @@
 												?>			
 										  </ul>
 										</tr>
+										
 									</tbody>
 								</table>
 							</div>
-							<?php endif;?>
+							<?php  endif;
+							       endif;?>
 						</div>
 		</div>
 	</div>
